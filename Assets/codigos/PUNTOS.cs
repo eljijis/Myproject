@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PUNTOS : MonoBehaviour
 {
    public int puntos; 
+   public Text textoPuntos; 
     void Start()
     {
         puntos = 0 ; 
@@ -19,5 +21,6 @@ public class PUNTOS : MonoBehaviour
     private void OnTriggerEnter(Collider c){
         Debug.Log("Choque tipo trigger");
         puntos++;
+        textoPuntos.text = puntos.ToString();
     }
 }
